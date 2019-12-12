@@ -1,0 +1,11 @@
+
+node_modules
+/dist
+/docs
+/backstop_data
+# local env files
+
+# Log files
+
+# Editor directories and files
+
