@@ -3,7 +3,11 @@ node_modules
 /dist
 /docs
 /backstop_data
+/coverage
+/tests/e2e/custom-commands
 # local env files
+.env.local
+.env.*.local
 
 # Log files
 

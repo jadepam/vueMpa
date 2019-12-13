@@ -22,7 +22,7 @@ exports.entries = function () {
         }else{
          map[filename] = {
             entry: filePath,
-            template: 'public/index.html',
+            template: 'public/index2.html',
             title: titles[filename],
             chunks: ['chunk-vendors', 'chunk-common', filename]
          }

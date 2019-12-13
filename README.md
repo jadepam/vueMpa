@@ -9,10 +9,32 @@
 bash router.sh 
 ```
 ## 测试
-- selenium-webdriver实现e2e测试:npm run e2e
-- UI样式回归测试：npm run ui
-    ```
-    backstop.cmd init
-    ```
-- karma实现unit测试：npm run unit
-- node接口测试：npm run service
+- UI样式回归测试：npm run test:ui
+
+- vue-mock:
+//"@vue/cli-plugin-unit-mocha": "^4.1.1",
+```
+ "test:mocha": "vue-cli-service test:unit --reporter mochawesome --reporter-options reportDir=docs/mochawesome,reportFilename=index",
+```
+- vue-jest
+ 
+//"@vue/cli-plugin-unit-jest": "^4.1.1",
+//"jest-serializer-vue": "^2.0.2",
+```
+"test:jest": vue-cli-service test:unit,
+
+"jest": {
+    "preset": "@vue/cli-plugin-unit-jest",
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "**/tests/unit/**/*.spec.{j,t}s?(x)",
+      "**/__tests__/*.{j,t}s?(x)",
+      "!**/node_modules/**"
+    ],//覆盖率
+    "snapshotSerializers": [
+      "jest-serializer-vue"
+    ]//快照
+  }
+```
+
+Karma and Mocha
